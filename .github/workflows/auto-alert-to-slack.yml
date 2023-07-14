@@ -5,12 +5,11 @@ on:
     branches:
       - main
 
-    paths:
-      - 'Java/**'
-
     paths-ignore:
       - 'Java/복습/**'
       - 'Java/이미지/**'
+      - '.github/**'
+      - 'README.md'
 
 jobs:
   auto-alert-to-slack:
