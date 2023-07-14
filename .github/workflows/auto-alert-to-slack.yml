@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - main
-    # paths-ignore:
-    #   - 'Java/복습/**'
-    #   - 'Java/이미지/**'
+
+    paths:
+      - 'Java/**'
+
+    paths-ignore:
+      - 'Java/복습/**'
+      - 'Java/이미지/**'
 
 jobs:
   auto-alert-to-slack:
