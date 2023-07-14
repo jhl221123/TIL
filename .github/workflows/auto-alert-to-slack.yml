@@ -20,7 +20,8 @@ jobs:
       - uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
-          fields: repo,workflow
+          text: 'TIL 작성했습니다.'
+          fields: repo,commit
           author_name: 이준혁
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
