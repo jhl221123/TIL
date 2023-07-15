@@ -8,8 +8,8 @@ on:
     paths-ignore:
       - 'Java/복습/**'
       - 'Java/이미지/**'
-      - 'Git/복습/**'
-      - 'Git/이미지/**'
+      - 'git/복습/**'
+      - 'git/이미지/**'
       - '.github/**'
       - 'README.md'
 
