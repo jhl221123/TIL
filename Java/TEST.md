@@ -5,3 +5,5 @@
 
 # paths: - 'Java/**' 제거
 * 하나의 이벤트에 paths, paths-ignore를 동시에 사용할 수 없다.
+
+# 쉘 스크립트 실행 테스트
