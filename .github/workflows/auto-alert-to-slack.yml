@@ -18,23 +18,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          sparse-checkout: |
-            Java
-          sparse-checkout-cone-mode: false
-
-      - name: post message to slack
-        run: |
-          bash post-message.sh ${{ secrets.SLACK_WEBHOOK_URL }}
-
-      # - uses: 8398a7/action-slack@v3
+      # - name: Checkout
+      #   uses: actions/checkout@v3
       #   with:
-      #     status: ${{ job.status }}
-      #     text: 'TIL 작성했습니다.'
-      #     fields: repo,commit
-      #     author_name: 이준혁
-      #   env:
-      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      #   if: always()
+      #     sparse-checkout: |
+      #       Java
+      #     sparse-checkout-cone-mode: false
+
+      # - name: post message to slack
+      #   run: |
+      #     bash post-message.sh ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          text: 'TIL 작성했습니다.'
+          fields: repo,commit
+          author_name: 이준혁
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()
