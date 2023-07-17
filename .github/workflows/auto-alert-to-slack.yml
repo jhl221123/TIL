@@ -27,7 +27,7 @@ jobs:
 
       - name: post message to slack
         run: |
-          ../../script/post-message.sh
+          ./script/post-message.sh
 
       # - uses: 8398a7/action-slack@v3
       #   with:
