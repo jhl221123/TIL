@@ -27,7 +27,7 @@ jobs:
           REPOSITORY_URL: ${{github.sha}}
           GITHUB_MESSAGE: ${{github.event.head_commit.message}}
         run: |
-          GITHUB_MESSAGE_TR=$(${{github.event.head_commit.message}} | tr ' ' '%20')
+          GITHUB_MESSAGE_TR=$("${{github.event.head_commit.message}}" | tr ' ' '%20')
           echo ${GITHUB_MESSAGE_TR}
           # curl -X POST -H 'Content-type: application/json' \
           #  --data '{"text":"<https://github.com/uotoua/TIL/blob/main/Java/${GITHUB_MESSAGE_TR}.md |TEST>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
