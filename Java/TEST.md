@@ -15,3 +15,4 @@
 - 이벤트, 액션 경로 확인 테스트
 - github.event 제거
 - post-message.sh 경로 변경
+- 실행 경로 변경
