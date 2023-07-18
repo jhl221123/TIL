@@ -24,10 +24,12 @@ jobs:
       - name: Run script
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          REPOSITORY_URL: ${{github.repositoryUrl}}
+          REPOSITORY_URL: ${{github.sha}}
           GITHUB_SHA: ${{github.sha}}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"<${{github.repositoryUrl}}|TEST>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          git log -1 --pretty=format:"%s"
+          curl -X POST -H 'Content-type: application/json' \
+           --data '{"text":"<https://github.com/uotoua/TIL/blob/main/Java/TEST.md|TEST>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
           # bash script/post-message.sh
 
 
