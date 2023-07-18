@@ -28,8 +28,7 @@ jobs:
       - name: echo commit id
         env:
           COMMIT_ID: ${{ github.sha }}
-          GITHUB_ACTION_PATH: cd ${{github.action_path}}
-        run: ${GITHUB_ACTION_PATH}/../TIL/TIL/.github/workflows/post-message.sh
+        run: cd ../TIL/TIL/.github/workflows/post-message.sh
         shell: sh
 
 

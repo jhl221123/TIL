@@ -16,3 +16,4 @@
 - github.event 제거
 - post-message.sh 경로 변경
 - 실행 경로 변경
+- github.action_path 제거
