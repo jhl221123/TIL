@@ -24,12 +24,12 @@ jobs:
       - name: Run script
         env:
           REPOSITORY_URL: ${{github.repositoryUrl}}
-          # COMMIT_FILES: ${{github.event.commits.added}}
-          # COMMIT_MESSAGE: ${{github.event.commits.message}}
+          COMMIT_FILES: ${{github.event.commits.added}}
+          COMMIT_MESSAGE: ${{github.event.commits.message}}
           GITHUB_SHA: ${{github.sha}}
         run: |
-          echo ${{github.event.commits.added}}
-          echo ${{github.event.commits.message}}
+          echo ${COMMIT_FILES}
+          echo ${COMMIT_MESSAGE}
           # bash script/post-message.sh
 
 
