@@ -2,5 +2,5 @@
 
 echo "Hello World"
 
-cd ../Java
+cd Java
 ls -al
