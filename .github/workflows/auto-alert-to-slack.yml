@@ -24,8 +24,10 @@ jobs:
           sparse-checkout: |
             Java
           sparse-checkout-cone-mode: false
-          run: ls -al .github/workflows
       
+      - name: Run script
+        run: |
+          script/post-message.sh
 
 
       # - name: post message to slack
