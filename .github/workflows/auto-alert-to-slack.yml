@@ -28,8 +28,8 @@ jobs:
       - name: echo commit id
         env:
           COMMIT_ID: ${{ github.sha }}
-        run: cd ../TIL/TIL/.github/workflows/post-message.sh
-        shell: sh
+        shell: bash
+        run: ls -al .github/workflows
 
 
       # - name: post message to slack

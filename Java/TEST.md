@@ -17,3 +17,4 @@
 - post-message.sh 경로 변경
 - 실행 경로 변경
 - github.action_path 제거
+- workflows 경로 확인
