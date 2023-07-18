@@ -28,13 +28,12 @@ jobs:
       - name: echo commit id
         env:
           COMMIT_ID: ${{ github.sha }}
-          EVENT: ${{ github.event }}
           EVENT_PATH: ${{ github.event_path }}
           ACTION_PATH: ${{github.action_path}}
-        run: echo "Commit id => $COMMIT_ID"
+        run: | 
+          echo "Commit id => $COMMIT_ID"
           echo "EVENT_PATH => $EVENT_PATH"
           echo "ACTION_PATH => $ACTION_PATH"
-          echo "EVENT => $EVENT"
 
       # - name: post message to slack
       #   run: 
