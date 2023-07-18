@@ -10,6 +10,7 @@ on:
       - 'Java/이미지/**'
       - 'git/복습/**'
       - 'git/이미지/**'
+      - 'DevOps/복습/**'
       - '.github/**'
       - 'README.md'
 
