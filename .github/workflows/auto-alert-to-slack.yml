@@ -24,12 +24,8 @@ jobs:
           sparse-checkout: |
             Java
           sparse-checkout-cone-mode: false
+          run: ls -al .github/workflows
       
-      - name: echo commit id
-        env:
-          COMMIT_ID: ${{ github.sha }}
-        shell: bash
-        run: ls -al .github/workflows
 
 
       # - name: post message to slack

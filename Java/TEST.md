@@ -18,3 +18,4 @@
 - 실행 경로 변경
 - github.action_path 제거
 - workflows 경로 확인
+- checkout action에서 경로 확인
