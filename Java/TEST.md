@@ -21,3 +21,4 @@
 - checkout action에서 경로 확인
 - 스크립트 위치 변경
 - bash 추가
+- ./ -> /

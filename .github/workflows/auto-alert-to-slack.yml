@@ -27,7 +27,7 @@ jobs:
       
       - name: Run script
         run: |
-          bash script/post-message.sh
+          bash /script/post-message.sh
 
 
       # - name: post message to slack
