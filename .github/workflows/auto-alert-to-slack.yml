@@ -25,11 +25,11 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           REPOSITORY_URL: ${{github.sha}}
-          GITHUB_SHA: ${{github.sha}}
+          GITHUB_MESSAGE: ${{github.event.head_commit.message}}
         run: |
           git log -1 --pretty=format:"%s"
           curl -X POST -H 'Content-type: application/json' \
-           --data '{"text":"<https://github.com/uotoua/TIL/blob/main/Java/TEST.md|TEST>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+           --data '{"text":"<https://github.com/uotoua/TIL/blob/main/Java/${{github.event.head_commit.message}}.md|TEST>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
           # bash script/post-message.sh
 
 
