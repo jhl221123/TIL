@@ -29,3 +29,4 @@
 # 쉘 스크립트 작성
 - Java 폴더로 경로 이동 테스트
 - 경로 수정
+- github.event.commits 출력 테스트
