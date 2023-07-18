@@ -23,13 +23,11 @@ jobs:
         
       - name: Run script
         env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           REPOSITORY_URL: ${{github.repositoryUrl}}
-          COMMIT_FILES: ${{github.event.commits.added}}
-          COMMIT_MESSAGE: ${{github.event.commits.message}}
           GITHUB_SHA: ${{github.sha}}
         run: |
-          echo ${COMMIT_FILES}
-          echo ${COMMIT_MESSAGE}
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"<${{github.repositoryUrl}}|TEST>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
           # bash script/post-message.sh
 
 
