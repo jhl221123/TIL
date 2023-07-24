@@ -15,6 +15,8 @@ on:
       - 'CS/이미지/**'
       - 'Web/복습/**'
       - 'Web/이미지/**'
+      - 'DB/복습/**'
+      - 'DB/이미지/**'
       - '.github/**'
       - 'README.md'
 
@@ -32,4 +34,4 @@ jobs:
           GITHUB_MESSAGE: ${{github.event.head_commit.message}}
         run: |
           curl -X POST -H 'Content-type: application/json' \
-          --data '{"attachments": [{"color": "#36a64f", "author_name": "이준혁", "title": "${{github.event.head_commit.message}}", "title_link": "https://github.com/uotoua/TIL/blob/main/Web/${{github.event.head_commit.message}}.md", "text": "TIL 작성했습니다."}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          --data '{"attachments": [{"color": "#36a64f", "author_name": "이준혁", "title": "${{github.event.head_commit.message}}", "title_link": "https://github.com/uotoua/TIL/blob/main/DB/${{github.event.head_commit.message}}.md", "text": "TIL 작성했습니다."}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
