@@ -6,6 +6,7 @@ on:
       - main
 
     paths-ignore:
+      - 'Java/**'
       - 'Java/복습/**'
       - 'Java/이미지/**'
       - 'Spring/복습/**'
