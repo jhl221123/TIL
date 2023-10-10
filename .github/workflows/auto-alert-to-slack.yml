@@ -30,6 +30,7 @@ on:
       - 'OOP/이미지/**'
       - 'Security/복습/**'
       - 'Security/이미지/**'
+      - 'Test/복습/**'
       - '.github/**'
       - 'README.md'
 
