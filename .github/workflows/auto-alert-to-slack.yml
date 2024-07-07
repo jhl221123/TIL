@@ -8,7 +8,6 @@ on:
     paths-ignore:
       - 'Java/복습/**'
       - 'Java/이미지/**'
-      - 'Java/**'
       - 'Spring/복습/**'
       - 'Spring/이미지/**'
       - 'git/복습/**'
